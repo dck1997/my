@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Image from 'next/image';
 class SideCar extends Component {
     constructor(props) {
         super(props);
@@ -13,7 +14,17 @@ class SideCar extends Component {
         return ( 
             <>
             <div className='sideCard'>
-                <a className='avator'><img src={"/img/avatar.jpg"}></img></a>
+                <a 
+                className='avator'
+                href=''
+                >
+                    <Image 
+                    src={"/img/avatar.jpg"}
+                    layout='fixed'
+                    width='240px'
+                    height='230%'
+                    />
+                </a>
                 <div className='footContent'>
                     <span className='title'>{this.state.firstTitle}</span>
                     <span>{this.state.secondTitle}</span>
@@ -70,13 +81,6 @@ class SideCar extends Component {
                     url('//at.alicdn.com/t/font_3165601_auunxnta37f.woff') format('woff'),
                     url('//at.alicdn.com/t/font_3165601_auunxnta37f.ttf') format('truetype'),
                     url('#iconfont') format('svg');
-                  }
-                .iconfont {
-                    font-family: "iconfont" !important;
-                    font-size: 16px;
-                    font-style: normal;
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
                   }
                 `}
             </style>

@@ -2,8 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from './Header/Header'
-import SideCar from './SideCard/SideCard'
-import WeiboCard from './WeiboCard/WeiboCard'
+import SideCar from './Sidebar/SideCard/SideCard'
+import WeiboCard from './Sidebar/WeiboCard/WeiboCard'
+import Lovewall from './Sidebar/LoveWall/Lovewall'
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -15,8 +16,11 @@ export default function Home() {
 
       <main className={styles.main}>
       <Header/>
-      {/* <SideCar/> */}
+      <div>
+      <SideCar/>
       <WeiboCard/>
+      <Lovewall/>
+      </div>
       </main>
 
       <footer className={styles.footer}>
